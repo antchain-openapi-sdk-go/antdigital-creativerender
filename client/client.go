@@ -807,7 +807,7 @@ type QueryAntcloudMarketingagentCreativeResultResponse struct {
 	// agent消息扩展信息
 	AssistantExtra *AssistantExtra `json:"assistant_extra,omitempty" xml:"assistant_extra,omitempty"`
 	// 当前会话的 Credit 计费总数
-	TotalCredit *int64 `json:"total_credit,omitempty" xml:"total_credit,omitempty"`
+	TotalCredit *string `json:"total_credit,omitempty" xml:"total_credit,omitempty"`
 }
 
 func (s QueryAntcloudMarketingagentCreativeResultResponse) String() string {
@@ -858,7 +858,7 @@ func (s *QueryAntcloudMarketingagentCreativeResultResponse) SetAssistantExtra(v 
 	return s
 }
 
-func (s *QueryAntcloudMarketingagentCreativeResultResponse) SetTotalCredit(v int64) *QueryAntcloudMarketingagentCreativeResultResponse {
+func (s *QueryAntcloudMarketingagentCreativeResultResponse) SetTotalCredit(v string) *QueryAntcloudMarketingagentCreativeResultResponse {
 	s.TotalCredit = &v
 	return s
 }
@@ -993,7 +993,7 @@ func (client *Client) DoRequest(version *string, action *string, protocol *strin
 				"req_msg_id":       antchainutil.GetNonce(),
 				"access_key":       client.AccessKeyId,
 				"base_sdk_version": tea.String("TeaSDK-2.0"),
-				"sdk_version":      tea.String("2.0.5"),
+				"sdk_version":      tea.String("2.0.6"),
 				"_prod_code":       tea.String("CREATIVERENDER"),
 				"_prod_channel":    tea.String("default"),
 			}
