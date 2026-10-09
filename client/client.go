@@ -940,6 +940,8 @@ type ExecAntcloudMarketingagentCreativeChatRequest struct {
 	Height *int64 `json:"height,omitempty" xml:"height,omitempty"`
 	// 额外参数
 	ExtraParams []*MapStruct `json:"extra_params,omitempty" xml:"extra_params,omitempty" type:"Repeated"`
+	// 产品码
+	ProductCode *string `json:"product_code,omitempty" xml:"product_code,omitempty"`
 }
 
 func (s ExecAntcloudMarketingagentCreativeChatRequest) String() string {
@@ -997,6 +999,11 @@ func (s *ExecAntcloudMarketingagentCreativeChatRequest) SetHeight(v int64) *Exec
 
 func (s *ExecAntcloudMarketingagentCreativeChatRequest) SetExtraParams(v []*MapStruct) *ExecAntcloudMarketingagentCreativeChatRequest {
 	s.ExtraParams = v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentCreativeChatRequest) SetProductCode(v string) *ExecAntcloudMarketingagentCreativeChatRequest {
+	s.ProductCode = &v
 	return s
 }
 
@@ -1769,7 +1776,7 @@ func (client *Client) DoRequest(version *string, action *string, protocol *strin
 				"req_msg_id":       antchainutil.GetNonce(),
 				"access_key":       client.AccessKeyId,
 				"base_sdk_version": tea.String("TeaSDK-2.0"),
-				"sdk_version":      tea.String("2.1.0"),
+				"sdk_version":      tea.String("2.1.1"),
 				"_prod_code":       tea.String("CREATIVERENDER"),
 				"_prod_channel":    tea.String("default"),
 			}
