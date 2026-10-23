@@ -1,0 +1,2455 @@
+// This file is auto-generated, don't edit it. Thanks.
+package client
+
+import (
+	rpcutil "github.com/alibabacloud-go/tea-rpc-utils/service"
+	util "github.com/alibabacloud-go/tea-utils/v2/service"
+	"github.com/alibabacloud-go/tea/tea"
+	antchainutil "github.com/antchain-openapi-sdk-go/antchain-util/service"
+)
+
+// Description:
+//
+// Model for initing client
+type Config struct {
+	// accesskey id
+	AccessKeyId *string `json:"accessKeyId,omitempty" xml:"accessKeyId,omitempty"`
+	// accesskey secret
+	AccessKeySecret *string `json:"accessKeySecret,omitempty" xml:"accessKeySecret,omitempty"`
+	// security token
+	SecurityToken *string `json:"securityToken,omitempty" xml:"securityToken,omitempty"`
+	// http protocol
+	//
+	// example:
+	//
+	// http
+	Protocol *string `json:"protocol,omitempty" xml:"protocol,omitempty"`
+	// read timeout
+	//
+	// example:
+	//
+	// 10
+	ReadTimeout *int `json:"readTimeout,omitempty" xml:"readTimeout,omitempty"`
+	// connect timeout
+	//
+	// example:
+	//
+	// 10
+	ConnectTimeout *int `json:"connectTimeout,omitempty" xml:"connectTimeout,omitempty"`
+	// http proxy
+	//
+	// example:
+	//
+	// http://localhost
+	HttpProxy *string `json:"httpProxy,omitempty" xml:"httpProxy,omitempty"`
+	// https proxy
+	//
+	// example:
+	//
+	// https://localhost
+	HttpsProxy *string `json:"httpsProxy,omitempty" xml:"httpsProxy,omitempty"`
+	// endpoint
+	//
+	// example:
+	//
+	// cs.aliyuncs.com
+	Endpoint *string `json:"endpoint,omitempty" xml:"endpoint,omitempty"`
+	// proxy white list
+	//
+	// example:
+	//
+	// http://localhost
+	NoProxy *string `json:"noProxy,omitempty" xml:"noProxy,omitempty"`
+	// max idle conns
+	//
+	// example:
+	//
+	// 3
+	MaxIdleConns *int `json:"maxIdleConns,omitempty" xml:"maxIdleConns,omitempty"`
+	// user agent
+	//
+	// example:
+	//
+	// Alibabacloud/1
+	UserAgent *string `json:"userAgent,omitempty" xml:"userAgent,omitempty"`
+	// socks5 proxy
+	Socks5Proxy *string `json:"socks5Proxy,omitempty" xml:"socks5Proxy,omitempty"`
+	// socks5 network
+	//
+	// example:
+	//
+	// TCP
+	Socks5NetWork *string `json:"socks5NetWork,omitempty" xml:"socks5NetWork,omitempty"`
+	// 长链接最大空闲时长
+	MaxIdleTimeMillis *int `json:"maxIdleTimeMillis,omitempty" xml:"maxIdleTimeMillis,omitempty"`
+	// 长链接最大连接时长
+	KeepAliveDurationMillis *int `json:"keepAliveDurationMillis,omitempty" xml:"keepAliveDurationMillis,omitempty"`
+	// 最大连接数（长链接最大总数）
+	MaxRequests *int `json:"maxRequests,omitempty" xml:"maxRequests,omitempty"`
+	// 每个目标主机的最大连接数（分主机域名的长链接最大总数
+	MaxRequestsPerHost *int `json:"maxRequestsPerHost,omitempty" xml:"maxRequestsPerHost,omitempty"`
+}
+
+func (s Config) String() string {
+	return tea.Prettify(s)
+}
+
+func (s Config) GoString() string {
+	return s.String()
+}
+
+func (s *Config) SetAccessKeyId(v string) *Config {
+	s.AccessKeyId = &v
+	return s
+}
+
+func (s *Config) SetAccessKeySecret(v string) *Config {
+	s.AccessKeySecret = &v
+	return s
+}
+
+func (s *Config) SetSecurityToken(v string) *Config {
+	s.SecurityToken = &v
+	return s
+}
+
+func (s *Config) SetProtocol(v string) *Config {
+	s.Protocol = &v
+	return s
+}
+
+func (s *Config) SetReadTimeout(v int) *Config {
+	s.ReadTimeout = &v
+	return s
+}
+
+func (s *Config) SetConnectTimeout(v int) *Config {
+	s.ConnectTimeout = &v
+	return s
+}
+
+func (s *Config) SetHttpProxy(v string) *Config {
+	s.HttpProxy = &v
+	return s
+}
+
+func (s *Config) SetHttpsProxy(v string) *Config {
+	s.HttpsProxy = &v
+	return s
+}
+
+func (s *Config) SetEndpoint(v string) *Config {
+	s.Endpoint = &v
+	return s
+}
+
+func (s *Config) SetNoProxy(v string) *Config {
+	s.NoProxy = &v
+	return s
+}
+
+func (s *Config) SetMaxIdleConns(v int) *Config {
+	s.MaxIdleConns = &v
+	return s
+}
+
+func (s *Config) SetUserAgent(v string) *Config {
+	s.UserAgent = &v
+	return s
+}
+
+func (s *Config) SetSocks5Proxy(v string) *Config {
+	s.Socks5Proxy = &v
+	return s
+}
+
+func (s *Config) SetSocks5NetWork(v string) *Config {
+	s.Socks5NetWork = &v
+	return s
+}
+
+func (s *Config) SetMaxIdleTimeMillis(v int) *Config {
+	s.MaxIdleTimeMillis = &v
+	return s
+}
+
+func (s *Config) SetKeepAliveDurationMillis(v int) *Config {
+	s.KeepAliveDurationMillis = &v
+	return s
+}
+
+func (s *Config) SetMaxRequests(v int) *Config {
+	s.MaxRequests = &v
+	return s
+}
+
+func (s *Config) SetMaxRequestsPerHost(v int) *Config {
+	s.MaxRequestsPerHost = &v
+	return s
+}
+
+// DataPart represents a structured blob.
+type DataPart struct {
+	// A JSON object containing arbitrary data.
+	// example:
+	//
+	// data
+	Data *string `json:"data,omitempty" xml:"data,omitempty"`
+}
+
+func (s DataPart) String() string {
+	return tea.Prettify(s)
+}
+
+func (s DataPart) GoString() string {
+	return s.String()
+}
+
+func (s *DataPart) SetData(v string) *DataPart {
+	s.Data = &v
+	return s
+}
+
+// Part represents a container for a section of communication content.
+type Part struct {
+	// the string content of the text part.
+	// example:
+	//
+	// content
+	Text *string `json:"text,omitempty" xml:"text,omitempty"`
+	// The structured data content.
+	Data *DataPart `json:"data,omitempty" xml:"data,omitempty"`
+}
+
+func (s Part) String() string {
+	return tea.Prettify(s)
+}
+
+func (s Part) GoString() string {
+	return s.String()
+}
+
+func (s *Part) SetText(v string) *Part {
+	s.Text = &v
+	return s
+}
+
+func (s *Part) SetData(v *DataPart) *Part {
+	s.Data = v
+	return s
+}
+
+// Message is one unit of communication between client and server.
+type Message struct {
+	// Parts is the container of the message content.
+	Parts []*Part `json:"parts,omitempty" xml:"parts,omitempty" type:"Repeated"`
+	// Identifies the sender of the message.
+	// USER role refers to communication from the client to the server.
+	// AGENT role refers to communication from the server to the client.
+	// example:
+	//
+	// USER
+	Role *string `json:"role,omitempty" xml:"role,omitempty"`
+	// The context id of the message. This is optional and if set, the message will be associated with the given context(a specific conversation or session).
+	// example:
+	//
+	// contextid
+	ContextId *string `json:"context_id,omitempty" xml:"context_id,omitempty"`
+}
+
+func (s Message) String() string {
+	return tea.Prettify(s)
+}
+
+func (s Message) GoString() string {
+	return s.String()
+}
+
+func (s *Message) SetParts(v []*Part) *Message {
+	s.Parts = v
+	return s
+}
+
+func (s *Message) SetRole(v string) *Message {
+	s.Role = &v
+	return s
+}
+
+func (s *Message) SetContextId(v string) *Message {
+	s.ContextId = &v
+	return s
+}
+
+// Artifacts represent task outputs.
+type Artifact struct {
+	// The content of the artifact. Must contain at least one part.
+	Parts []*Part `json:"parts,omitempty" xml:"parts,omitempty" type:"Repeated"`
+}
+
+func (s Artifact) String() string {
+	return tea.Prettify(s)
+}
+
+func (s Artifact) GoString() string {
+	return s.String()
+}
+
+func (s *Artifact) SetParts(v []*Part) *Artifact {
+	s.Parts = v
+	return s
+}
+
+// A container for the status of a task
+type TaskStatus struct {
+	// The current state of this task.
+	// example:
+	//
+	// TASK_STATE_COMPLETED
+	State *string `json:"state,omitempty" xml:"state,omitempty" require:"true"`
+	// A message associated with the status.
+	Message *Message `json:"message,omitempty" xml:"message,omitempty" require:"true"`
+}
+
+func (s TaskStatus) String() string {
+	return tea.Prettify(s)
+}
+
+func (s TaskStatus) GoString() string {
+	return s.String()
+}
+
+func (s *TaskStatus) SetState(v string) *TaskStatus {
+	s.State = &v
+	return s
+}
+
+func (s *TaskStatus) SetMessage(v *Message) *TaskStatus {
+	s.Message = v
+	return s
+}
+
+// 基金长图分段当前快照，包含头图和正文段图及其版本信息。
+type LongImageSegment struct {
+	// 全局唯一的分段业务 ID。
+	// example:
+	//
+	// LS_xxx
+	SegmentId *string `json:"segment_id,omitempty" xml:"segment_id,omitempty"`
+	// 分段类型：BANNER 为长图头图；CONTENT 为正文段图。
+	// example:
+	//
+	// BANNER
+	SegmentType *string `json:"segment_type,omitempty" xml:"segment_type,omitempty"`
+	// 展示顺序，从 0 开始；头图固定为 0，正文从 1 开始，值越小越靠前。
+	// example:
+	//
+	// 0
+	SortNo *int64 `json:"sort_no,omitempty" xml:"sort_no,omitempty"`
+	// 首次生成该分段使用的原文，后续编辑或回滚不会修改。
+	// example:
+	//
+	// 基金投资亮点
+	SourceText *string `json:"source_text,omitempty" xml:"source_text,omitempty"`
+	// 当前分段版本 ID；仅在 current_status 为 SUCCESS 时可作为子图编辑来源。
+	// example:
+	//
+	// LV_xxx
+	CurrentVersionId *string `json:"current_version_id,omitempty" xml:"current_version_id,omitempty"`
+	// 当前版本状态：PROCESSING、SUCCESS、FAILED、CONFLICT。
+	// example:
+	//
+	// SUCCESS
+	CurrentStatus *string `json:"current_status,omitempty" xml:"current_status,omitempty"`
+	// 当前版本的图片地址。
+	// example:
+	//
+	// https://example.com/segment.png
+	CurrentImageUrl *string `json:"current_image_url,omitempty" xml:"current_image_url,omitempty"`
+	// 最近可用的成功版本 ID，可作为子图编辑来源；没有成功版本时为空。
+	// example:
+	//
+	// LV_xxx
+	LastSuccessVersionId *string `json:"last_success_version_id,omitempty" xml:"last_success_version_id,omitempty"`
+	// last_success_version_id 对应的图片地址；没有成功成果时为空。
+	// example:
+	//
+	// https://example.com/segment.png
+	LastSuccessImageUrl *string `json:"last_success_image_url,omitempty" xml:"last_success_image_url,omitempty"`
+}
+
+func (s LongImageSegment) String() string {
+	return tea.Prettify(s)
+}
+
+func (s LongImageSegment) GoString() string {
+	return s.String()
+}
+
+func (s *LongImageSegment) SetSegmentId(v string) *LongImageSegment {
+	s.SegmentId = &v
+	return s
+}
+
+func (s *LongImageSegment) SetSegmentType(v string) *LongImageSegment {
+	s.SegmentType = &v
+	return s
+}
+
+func (s *LongImageSegment) SetSortNo(v int64) *LongImageSegment {
+	s.SortNo = &v
+	return s
+}
+
+func (s *LongImageSegment) SetSourceText(v string) *LongImageSegment {
+	s.SourceText = &v
+	return s
+}
+
+func (s *LongImageSegment) SetCurrentVersionId(v string) *LongImageSegment {
+	s.CurrentVersionId = &v
+	return s
+}
+
+func (s *LongImageSegment) SetCurrentStatus(v string) *LongImageSegment {
+	s.CurrentStatus = &v
+	return s
+}
+
+func (s *LongImageSegment) SetCurrentImageUrl(v string) *LongImageSegment {
+	s.CurrentImageUrl = &v
+	return s
+}
+
+func (s *LongImageSegment) SetLastSuccessVersionId(v string) *LongImageSegment {
+	s.LastSuccessVersionId = &v
+	return s
+}
+
+func (s *LongImageSegment) SetLastSuccessImageUrl(v string) *LongImageSegment {
+	s.LastSuccessImageUrl = &v
+	return s
+}
+
+// ASSISTANT 消息特有信息
+type AssistantExtra struct {
+	// 任务id
+	// example:
+	//
+	// M_d3f7859e845a4ed58bedc446fec32427
+	TaskId *string `json:"task_id,omitempty" xml:"task_id,omitempty"`
+	// 生图状态
+	// example:
+	//
+	// PROCESSING
+	RenderStatus *string `json:"render_status,omitempty" xml:"render_status,omitempty"`
+	// 生图结果
+	// example:
+	//
+	// undefined
+	ResultUrl []*string `json:"result_url,omitempty" xml:"result_url,omitempty" type:"Repeated"`
+	// 基金长图子图列表，仅在 return_sub_images 为 true 且长图生成完成时返回。
+	// example:
+	//
+	// undefined
+	SubImages []*LongImageSegment `json:"sub_images,omitempty" xml:"sub_images,omitempty" type:"Repeated"`
+}
+
+func (s AssistantExtra) String() string {
+	return tea.Prettify(s)
+}
+
+func (s AssistantExtra) GoString() string {
+	return s.String()
+}
+
+func (s *AssistantExtra) SetTaskId(v string) *AssistantExtra {
+	s.TaskId = &v
+	return s
+}
+
+func (s *AssistantExtra) SetRenderStatus(v string) *AssistantExtra {
+	s.RenderStatus = &v
+	return s
+}
+
+func (s *AssistantExtra) SetResultUrl(v []*string) *AssistantExtra {
+	s.ResultUrl = v
+	return s
+}
+
+func (s *AssistantExtra) SetSubImages(v []*LongImageSegment) *AssistantExtra {
+	s.SubImages = v
+	return s
+}
+
+// map结构体
+type MapStruct struct {
+	// 生图数量
+	// example:
+	//
+	// generationCount
+	Key *string `json:"key,omitempty" xml:"key,omitempty" require:"true"`
+	// key对应的值
+	// example:
+	//
+	// 1
+	Value *string `json:"value,omitempty" xml:"value,omitempty" require:"true"`
+}
+
+func (s MapStruct) String() string {
+	return tea.Prettify(s)
+}
+
+func (s MapStruct) GoString() string {
+	return s.String()
+}
+
+func (s *MapStruct) SetKey(v string) *MapStruct {
+	s.Key = &v
+	return s
+}
+
+func (s *MapStruct) SetValue(v string) *MapStruct {
+	s.Value = &v
+	return s
+}
+
+// 素材
+type CreativeMaterial struct {
+	// Creative 行业产品代码：FUND / RETAIL，查询时缺省为 RETAIL
+	// example:
+	//
+	// RETAIL
+	ProductCode *string `json:"product_code,omitempty" xml:"product_code,omitempty"`
+	// 素材ID
+	// example:
+	//
+	// d55ad74641ce8895ad1321e8b36c4d70
+	MaterialId *string `json:"material_id,omitempty" xml:"material_id,omitempty"`
+	// 素材类型，如 IMAGE / ANIMATION / FONT
+	// example:
+	//
+	// IMAGE
+	MaterialType *string `json:"material_type,omitempty" xml:"material_type,omitempty"`
+	// 素材形式（SINGLE/PACKAGE）
+	// example:
+	//
+	// SINGLE
+	MaterialForm *string `json:"material_form,omitempty" xml:"material_form,omitempty"`
+	// 父素材ID
+	// example:
+	//
+	// c96a7673a96a4178809f6c0f4da40558
+	ParentMaterialId *string `json:"parent_material_id,omitempty" xml:"parent_material_id,omitempty"`
+	// 是否为封面
+	// example:
+	//
+	// false
+	Cover *bool `json:"cover,omitempty" xml:"cover,omitempty"`
+	// 素材名称
+	// example:
+	//
+	// 海报
+	Name *string `json:"name,omitempty" xml:"name,omitempty"`
+	// 素材文件URL
+	// example:
+	//
+	// creative/20260909/sample.jpg
+	FileUrl *string `json:"file_url,omitempty" xml:"file_url,omitempty"`
+	// 宽度（像素）
+	// example:
+	//
+	// 1080
+	Width *int64 `json:"width,omitempty" xml:"width,omitempty"`
+	// 高度（像素）
+	// example:
+	//
+	// 1920
+	Height *int64 `json:"height,omitempty" xml:"height,omitempty"`
+	// 字体族名（仅 FONT 类型）
+	// example:
+	//
+	// DEMO_FONT
+	FontFamily *string `json:"font_family,omitempty" xml:"font_family,omitempty"`
+	// 使用场景
+	// example:
+	//
+	// BANNER
+	Scene *string `json:"scene,omitempty" xml:"scene,omitempty"`
+	// 素材用途：REFERENCE_STYLE=参考样式，INPUT_ELEMENT=输入元素
+	// example:
+	//
+	// REFERENCE_STYLE
+	MaterialUsage *string `json:"material_usage,omitempty" xml:"material_usage,omitempty"`
+	// RETAIL
+	// example:
+	//
+	// 行业
+	Industry *string `json:"industry,omitempty" xml:"industry,omitempty"`
+	// 投放平台，多个值使用英文逗号分隔
+	// example:
+	//
+	// ALIPAY
+	PublishPlatforms *string `json:"publish_platforms,omitempty" xml:"publish_platforms,omitempty"`
+	// 尺寸类型（16:9、9:16、1:1、4:3、3:4、OTHER）
+	// example:
+	//
+	// 9:16
+	MaterialSizeType *string `json:"material_size_type,omitempty" xml:"material_size_type,omitempty"`
+	// 空间类型：PERSONAL / ENTERPRISE
+	// example:
+	//
+	// ENTERPRISE
+	SpaceType *string `json:"space_type,omitempty" xml:"space_type,omitempty"`
+	// 所有者名称
+	// example:
+	//
+	// name
+	OwnerName *string `json:"owner_name,omitempty" xml:"owner_name,omitempty"`
+	// 创建时间，格式 yyyy-MM-dd HH:mm:ss
+	// example:
+	//
+	// 2026-09-21 12:00:00
+	GmtCreate *string `json:"gmt_create,omitempty" xml:"gmt_create,omitempty"`
+}
+
+func (s CreativeMaterial) String() string {
+	return tea.Prettify(s)
+}
+
+func (s CreativeMaterial) GoString() string {
+	return s.String()
+}
+
+func (s *CreativeMaterial) SetProductCode(v string) *CreativeMaterial {
+	s.ProductCode = &v
+	return s
+}
+
+func (s *CreativeMaterial) SetMaterialId(v string) *CreativeMaterial {
+	s.MaterialId = &v
+	return s
+}
+
+func (s *CreativeMaterial) SetMaterialType(v string) *CreativeMaterial {
+	s.MaterialType = &v
+	return s
+}
+
+func (s *CreativeMaterial) SetMaterialForm(v string) *CreativeMaterial {
+	s.MaterialForm = &v
+	return s
+}
+
+func (s *CreativeMaterial) SetParentMaterialId(v string) *CreativeMaterial {
+	s.ParentMaterialId = &v
+	return s
+}
+
+func (s *CreativeMaterial) SetCover(v bool) *CreativeMaterial {
+	s.Cover = &v
+	return s
+}
+
+func (s *CreativeMaterial) SetName(v string) *CreativeMaterial {
+	s.Name = &v
+	return s
+}
+
+func (s *CreativeMaterial) SetFileUrl(v string) *CreativeMaterial {
+	s.FileUrl = &v
+	return s
+}
+
+func (s *CreativeMaterial) SetWidth(v int64) *CreativeMaterial {
+	s.Width = &v
+	return s
+}
+
+func (s *CreativeMaterial) SetHeight(v int64) *CreativeMaterial {
+	s.Height = &v
+	return s
+}
+
+func (s *CreativeMaterial) SetFontFamily(v string) *CreativeMaterial {
+	s.FontFamily = &v
+	return s
+}
+
+func (s *CreativeMaterial) SetScene(v string) *CreativeMaterial {
+	s.Scene = &v
+	return s
+}
+
+func (s *CreativeMaterial) SetMaterialUsage(v string) *CreativeMaterial {
+	s.MaterialUsage = &v
+	return s
+}
+
+func (s *CreativeMaterial) SetIndustry(v string) *CreativeMaterial {
+	s.Industry = &v
+	return s
+}
+
+func (s *CreativeMaterial) SetPublishPlatforms(v string) *CreativeMaterial {
+	s.PublishPlatforms = &v
+	return s
+}
+
+func (s *CreativeMaterial) SetMaterialSizeType(v string) *CreativeMaterial {
+	s.MaterialSizeType = &v
+	return s
+}
+
+func (s *CreativeMaterial) SetSpaceType(v string) *CreativeMaterial {
+	s.SpaceType = &v
+	return s
+}
+
+func (s *CreativeMaterial) SetOwnerName(v string) *CreativeMaterial {
+	s.OwnerName = &v
+	return s
+}
+
+func (s *CreativeMaterial) SetGmtCreate(v string) *CreativeMaterial {
+	s.GmtCreate = &v
+	return s
+}
+
+// 参考样式素材引用
+type CreativeAssetRef struct {
+	// 素材来源
+	// example:
+	//
+	// URL
+	SourceType *string `json:"source_type,omitempty" xml:"source_type,omitempty" require:"true"`
+	// 素材ID，只有素材来源于creative的素材库中才需要填入
+	// example:
+	//
+	// 5bf62f7dd73b4efa8dea7a2665cd2173
+	MaterialId *string `json:"material_id,omitempty" xml:"material_id,omitempty"`
+	// 可公网访问的素材url地址
+	// example:
+	//
+	// https://mdn.alipayobjects.com/wofi_creative/afts/file/80mwSruGUE4AAAAAAAAAAAAA-FZ4AQJr
+	Url *string `json:"url,omitempty" xml:"url,omitempty"`
+	// 使用提示
+	// example:
+	//
+	// 二维码保持清晰
+	UsageHint *string `json:"usage_hint,omitempty" xml:"usage_hint,omitempty"`
+}
+
+func (s CreativeAssetRef) String() string {
+	return tea.Prettify(s)
+}
+
+func (s CreativeAssetRef) GoString() string {
+	return s.String()
+}
+
+func (s *CreativeAssetRef) SetSourceType(v string) *CreativeAssetRef {
+	s.SourceType = &v
+	return s
+}
+
+func (s *CreativeAssetRef) SetMaterialId(v string) *CreativeAssetRef {
+	s.MaterialId = &v
+	return s
+}
+
+func (s *CreativeAssetRef) SetUrl(v string) *CreativeAssetRef {
+	s.Url = &v
+	return s
+}
+
+func (s *CreativeAssetRef) SetUsageHint(v string) *CreativeAssetRef {
+	s.UsageHint = &v
+	return s
+}
+
+// 视频输出结果
+type VideoOutput struct {
+	// 产物类型
+	// example:
+	//
+	// video
+	Type *string `json:"type,omitempty" xml:"type,omitempty"`
+	// 可下载的视频地址
+	// example:
+	//
+	// https://example.com/result.mp4
+	Url *string `json:"url,omitempty" xml:"url,omitempty"`
+	// 产物 ID
+	// example:
+	//
+	// video-001
+	Id *string `json:"id,omitempty" xml:"id,omitempty"`
+	// 实际视频时长，单位秒
+	// example:
+	//
+	// 15
+	Duration *int64 `json:"duration,omitempty" xml:"duration,omitempty"`
+	// URL 过期时间，毫秒时间戳；能确定时返回
+	// example:
+	//
+	// 1790000000000
+	ExpireTime *int64 `json:"expire_time,omitempty" xml:"expire_time,omitempty"`
+}
+
+func (s VideoOutput) String() string {
+	return tea.Prettify(s)
+}
+
+func (s VideoOutput) GoString() string {
+	return s.String()
+}
+
+func (s *VideoOutput) SetType(v string) *VideoOutput {
+	s.Type = &v
+	return s
+}
+
+func (s *VideoOutput) SetUrl(v string) *VideoOutput {
+	s.Url = &v
+	return s
+}
+
+func (s *VideoOutput) SetId(v string) *VideoOutput {
+	s.Id = &v
+	return s
+}
+
+func (s *VideoOutput) SetDuration(v int64) *VideoOutput {
+	s.Duration = &v
+	return s
+}
+
+func (s *VideoOutput) SetExpireTime(v int64) *VideoOutput {
+	s.ExpireTime = &v
+	return s
+}
+
+// Task is the core unit of action for A2A. It has a current status and when results are created for the task they are stored in the artifact.
+type Task struct {
+	// Unique identifier (e.g. UUID) for the task, generated by the server for a new task.
+	// example:
+	//
+	// 6c7a3d8f9e544c5ab3e17f2a1b9c4e8d
+	Id *string `json:"id,omitempty" xml:"id,omitempty" require:"true"`
+	// Unique identifier (e.g. UUID) for the contextual collection of interactions (tasks and messages). Created by the A2A server.
+	// example:
+	//
+	// contextid
+	ContextId *string `json:"context_id,omitempty" xml:"context_id,omitempty"`
+	// The current status of a Task, including state and a message.
+	Status *TaskStatus `json:"status,omitempty" xml:"status,omitempty" require:"true"`
+	// A set of output artifacts for a Task.
+	Artifacts []*Artifact `json:"artifacts,omitempty" xml:"artifacts,omitempty" require:"true" type:"Repeated"`
+}
+
+func (s Task) String() string {
+	return tea.Prettify(s)
+}
+
+func (s Task) GoString() string {
+	return s.String()
+}
+
+func (s *Task) SetId(v string) *Task {
+	s.Id = &v
+	return s
+}
+
+func (s *Task) SetContextId(v string) *Task {
+	s.ContextId = &v
+	return s
+}
+
+func (s *Task) SetStatus(v *TaskStatus) *Task {
+	s.Status = v
+	return s
+}
+
+func (s *Task) SetArtifacts(v []*Artifact) *Task {
+	s.Artifacts = v
+	return s
+}
+
+type ExecAntcloudMarketingagentChatCreativeRequest struct {
+	// OAuth模式下的授权token
+	AuthToken *string `json:"auth_token,omitempty" xml:"auth_token,omitempty"`
+	// 会话ID，如需支持多轮对话，需要传入之前的会话ID
+	SessionId *string `json:"session_id,omitempty" xml:"session_id,omitempty"`
+	// 服务类型（默认IMAGE_RENDER）
+	EntryType *string `json:"entry_type,omitempty" xml:"entry_type,omitempty"`
+	// 表达用户意图
+	Prompt *string `json:"prompt,omitempty" xml:"prompt,omitempty" require:"true"`
+	// 参考样式
+	ReferenceStyle *CreativeAssetRef `json:"reference_style,omitempty" xml:"reference_style,omitempty"`
+	// 输入元素
+	InputElements []*CreativeAssetRef `json:"input_elements,omitempty" xml:"input_elements,omitempty" type:"Repeated"`
+	// 使用场景
+	Scene *string `json:"scene,omitempty" xml:"scene,omitempty"`
+	// 生图宽度
+	Width *int64 `json:"width,omitempty" xml:"width,omitempty"`
+	// 生图高度
+	Height *int64 `json:"height,omitempty" xml:"height,omitempty"`
+	// 扩展参数
+	ExtraParams []*MapStruct `json:"extra_params,omitempty" xml:"extra_params,omitempty" type:"Repeated"`
+}
+
+func (s ExecAntcloudMarketingagentChatCreativeRequest) String() string {
+	return tea.Prettify(s)
+}
+
+func (s ExecAntcloudMarketingagentChatCreativeRequest) GoString() string {
+	return s.String()
+}
+
+func (s *ExecAntcloudMarketingagentChatCreativeRequest) SetAuthToken(v string) *ExecAntcloudMarketingagentChatCreativeRequest {
+	s.AuthToken = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentChatCreativeRequest) SetSessionId(v string) *ExecAntcloudMarketingagentChatCreativeRequest {
+	s.SessionId = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentChatCreativeRequest) SetEntryType(v string) *ExecAntcloudMarketingagentChatCreativeRequest {
+	s.EntryType = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentChatCreativeRequest) SetPrompt(v string) *ExecAntcloudMarketingagentChatCreativeRequest {
+	s.Prompt = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentChatCreativeRequest) SetReferenceStyle(v *CreativeAssetRef) *ExecAntcloudMarketingagentChatCreativeRequest {
+	s.ReferenceStyle = v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentChatCreativeRequest) SetInputElements(v []*CreativeAssetRef) *ExecAntcloudMarketingagentChatCreativeRequest {
+	s.InputElements = v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentChatCreativeRequest) SetScene(v string) *ExecAntcloudMarketingagentChatCreativeRequest {
+	s.Scene = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentChatCreativeRequest) SetWidth(v int64) *ExecAntcloudMarketingagentChatCreativeRequest {
+	s.Width = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentChatCreativeRequest) SetHeight(v int64) *ExecAntcloudMarketingagentChatCreativeRequest {
+	s.Height = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentChatCreativeRequest) SetExtraParams(v []*MapStruct) *ExecAntcloudMarketingagentChatCreativeRequest {
+	s.ExtraParams = v
+	return s
+}
+
+type ExecAntcloudMarketingagentChatCreativeResponse struct {
+	// 请求唯一ID，用于链路跟踪和问题排查
+	ReqMsgId *string `json:"req_msg_id,omitempty" xml:"req_msg_id,omitempty"`
+	// 结果码，一般OK表示调用成功
+	ResultCode *string `json:"result_code,omitempty" xml:"result_code,omitempty"`
+	// 异常信息的文本描述
+	ResultMsg *string `json:"result_msg,omitempty" xml:"result_msg,omitempty"`
+	// 消息ID
+	MessageId *string `json:"message_id,omitempty" xml:"message_id,omitempty"`
+	// 所属会话ID
+	SessionId *string `json:"session_id,omitempty" xml:"session_id,omitempty"`
+	// 消息角色
+	Role *string `json:"role,omitempty" xml:"role,omitempty"`
+	// 消息状态
+	Status *string `json:"status,omitempty" xml:"status,omitempty"`
+	// 消息内容
+	Content *string `json:"content,omitempty" xml:"content,omitempty"`
+	// ASSISTANT消息的额外信息
+	AssistantExtra *AssistantExtra `json:"assistant_extra,omitempty" xml:"assistant_extra,omitempty"`
+}
+
+func (s ExecAntcloudMarketingagentChatCreativeResponse) String() string {
+	return tea.Prettify(s)
+}
+
+func (s ExecAntcloudMarketingagentChatCreativeResponse) GoString() string {
+	return s.String()
+}
+
+func (s *ExecAntcloudMarketingagentChatCreativeResponse) SetReqMsgId(v string) *ExecAntcloudMarketingagentChatCreativeResponse {
+	s.ReqMsgId = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentChatCreativeResponse) SetResultCode(v string) *ExecAntcloudMarketingagentChatCreativeResponse {
+	s.ResultCode = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentChatCreativeResponse) SetResultMsg(v string) *ExecAntcloudMarketingagentChatCreativeResponse {
+	s.ResultMsg = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentChatCreativeResponse) SetMessageId(v string) *ExecAntcloudMarketingagentChatCreativeResponse {
+	s.MessageId = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentChatCreativeResponse) SetSessionId(v string) *ExecAntcloudMarketingagentChatCreativeResponse {
+	s.SessionId = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentChatCreativeResponse) SetRole(v string) *ExecAntcloudMarketingagentChatCreativeResponse {
+	s.Role = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentChatCreativeResponse) SetStatus(v string) *ExecAntcloudMarketingagentChatCreativeResponse {
+	s.Status = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentChatCreativeResponse) SetContent(v string) *ExecAntcloudMarketingagentChatCreativeResponse {
+	s.Content = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentChatCreativeResponse) SetAssistantExtra(v *AssistantExtra) *ExecAntcloudMarketingagentChatCreativeResponse {
+	s.AssistantExtra = v
+	return s
+}
+
+type ExecAntcloudMarketingagentCreativeChatRequest struct {
+	// OAuth模式下的授权token
+	AuthToken *string `json:"auth_token,omitempty" xml:"auth_token,omitempty"`
+	// 会话ID，如需支持多轮对话，需要传入之前的会话ID
+	SessionId *string `json:"session_id,omitempty" xml:"session_id,omitempty"`
+	// 服务类型（默认IMAGE_RENDER）
+	EntryType *string `json:"entry_type,omitempty" xml:"entry_type,omitempty"`
+	// 表达用户意图
+	Prompt *string `json:"prompt,omitempty" xml:"prompt,omitempty" require:"true"`
+	// 参考样式
+	ReferenceStyle *CreativeAssetRef `json:"reference_style,omitempty" xml:"reference_style,omitempty"`
+	// 输入元素
+	InputElements []*AssistantExtra `json:"input_elements,omitempty" xml:"input_elements,omitempty" type:"Repeated"`
+	// 使用场景
+	Scene *string `json:"scene,omitempty" xml:"scene,omitempty"`
+	// 生图宽度
+	Width *int64 `json:"width,omitempty" xml:"width,omitempty"`
+	// 生图高度
+	Height *int64 `json:"height,omitempty" xml:"height,omitempty"`
+	// 额外参数
+	ExtraParams []*MapStruct `json:"extra_params,omitempty" xml:"extra_params,omitempty" type:"Repeated"`
+	// 产品码
+	ProductCode *string `json:"product_code,omitempty" xml:"product_code,omitempty"`
+}
+
+func (s ExecAntcloudMarketingagentCreativeChatRequest) String() string {
+	return tea.Prettify(s)
+}
+
+func (s ExecAntcloudMarketingagentCreativeChatRequest) GoString() string {
+	return s.String()
+}
+
+func (s *ExecAntcloudMarketingagentCreativeChatRequest) SetAuthToken(v string) *ExecAntcloudMarketingagentCreativeChatRequest {
+	s.AuthToken = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentCreativeChatRequest) SetSessionId(v string) *ExecAntcloudMarketingagentCreativeChatRequest {
+	s.SessionId = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentCreativeChatRequest) SetEntryType(v string) *ExecAntcloudMarketingagentCreativeChatRequest {
+	s.EntryType = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentCreativeChatRequest) SetPrompt(v string) *ExecAntcloudMarketingagentCreativeChatRequest {
+	s.Prompt = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentCreativeChatRequest) SetReferenceStyle(v *CreativeAssetRef) *ExecAntcloudMarketingagentCreativeChatRequest {
+	s.ReferenceStyle = v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentCreativeChatRequest) SetInputElements(v []*AssistantExtra) *ExecAntcloudMarketingagentCreativeChatRequest {
+	s.InputElements = v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentCreativeChatRequest) SetScene(v string) *ExecAntcloudMarketingagentCreativeChatRequest {
+	s.Scene = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentCreativeChatRequest) SetWidth(v int64) *ExecAntcloudMarketingagentCreativeChatRequest {
+	s.Width = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentCreativeChatRequest) SetHeight(v int64) *ExecAntcloudMarketingagentCreativeChatRequest {
+	s.Height = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentCreativeChatRequest) SetExtraParams(v []*MapStruct) *ExecAntcloudMarketingagentCreativeChatRequest {
+	s.ExtraParams = v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentCreativeChatRequest) SetProductCode(v string) *ExecAntcloudMarketingagentCreativeChatRequest {
+	s.ProductCode = &v
+	return s
+}
+
+type ExecAntcloudMarketingagentCreativeChatResponse struct {
+	// 请求唯一ID，用于链路跟踪和问题排查
+	ReqMsgId *string `json:"req_msg_id,omitempty" xml:"req_msg_id,omitempty"`
+	// 结果码，一般OK表示调用成功
+	ResultCode *string `json:"result_code,omitempty" xml:"result_code,omitempty"`
+	// 异常信息的文本描述
+	ResultMsg *string `json:"result_msg,omitempty" xml:"result_msg,omitempty"`
+	// 消息ID
+	MessageId *string `json:"message_id,omitempty" xml:"message_id,omitempty"`
+	// 所属会话ID
+	SessionId *string `json:"session_id,omitempty" xml:"session_id,omitempty"`
+	// 消息角色
+	Role *string `json:"role,omitempty" xml:"role,omitempty"`
+	// 消息状态
+	Status *string `json:"status,omitempty" xml:"status,omitempty"`
+	// 消息内容
+	Content *string `json:"content,omitempty" xml:"content,omitempty"`
+	// ASSISTANT消息的额外信息
+	AssistantExtra *AssistantExtra `json:"assistant_extra,omitempty" xml:"assistant_extra,omitempty"`
+}
+
+func (s ExecAntcloudMarketingagentCreativeChatResponse) String() string {
+	return tea.Prettify(s)
+}
+
+func (s ExecAntcloudMarketingagentCreativeChatResponse) GoString() string {
+	return s.String()
+}
+
+func (s *ExecAntcloudMarketingagentCreativeChatResponse) SetReqMsgId(v string) *ExecAntcloudMarketingagentCreativeChatResponse {
+	s.ReqMsgId = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentCreativeChatResponse) SetResultCode(v string) *ExecAntcloudMarketingagentCreativeChatResponse {
+	s.ResultCode = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentCreativeChatResponse) SetResultMsg(v string) *ExecAntcloudMarketingagentCreativeChatResponse {
+	s.ResultMsg = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentCreativeChatResponse) SetMessageId(v string) *ExecAntcloudMarketingagentCreativeChatResponse {
+	s.MessageId = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentCreativeChatResponse) SetSessionId(v string) *ExecAntcloudMarketingagentCreativeChatResponse {
+	s.SessionId = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentCreativeChatResponse) SetRole(v string) *ExecAntcloudMarketingagentCreativeChatResponse {
+	s.Role = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentCreativeChatResponse) SetStatus(v string) *ExecAntcloudMarketingagentCreativeChatResponse {
+	s.Status = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentCreativeChatResponse) SetContent(v string) *ExecAntcloudMarketingagentCreativeChatResponse {
+	s.Content = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentCreativeChatResponse) SetAssistantExtra(v *AssistantExtra) *ExecAntcloudMarketingagentCreativeChatResponse {
+	s.AssistantExtra = v
+	return s
+}
+
+type QueryAntcloudMarketingagentCreativeResultRequest struct {
+	// OAuth模式下的授权token
+	AuthToken *string `json:"auth_token,omitempty" xml:"auth_token,omitempty"`
+	// 消息ID
+	MessageId *string `json:"message_id,omitempty" xml:"message_id,omitempty" require:"true"`
+	// 是否返回基金长图的子图列表，默认 false。为 true 时，在长图生成完成后返回 assistant_extra.sub_images；不影响长图生成流程。
+	ReturnSubImages *bool `json:"return_sub_images,omitempty" xml:"return_sub_images,omitempty"`
+}
+
+func (s QueryAntcloudMarketingagentCreativeResultRequest) String() string {
+	return tea.Prettify(s)
+}
+
+func (s QueryAntcloudMarketingagentCreativeResultRequest) GoString() string {
+	return s.String()
+}
+
+func (s *QueryAntcloudMarketingagentCreativeResultRequest) SetAuthToken(v string) *QueryAntcloudMarketingagentCreativeResultRequest {
+	s.AuthToken = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentCreativeResultRequest) SetMessageId(v string) *QueryAntcloudMarketingagentCreativeResultRequest {
+	s.MessageId = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentCreativeResultRequest) SetReturnSubImages(v bool) *QueryAntcloudMarketingagentCreativeResultRequest {
+	s.ReturnSubImages = &v
+	return s
+}
+
+type QueryAntcloudMarketingagentCreativeResultResponse struct {
+	// 请求唯一ID，用于链路跟踪和问题排查
+	ReqMsgId *string `json:"req_msg_id,omitempty" xml:"req_msg_id,omitempty"`
+	// 结果码，一般OK表示调用成功
+	ResultCode *string `json:"result_code,omitempty" xml:"result_code,omitempty"`
+	// 异常信息的文本描述
+	ResultMsg *string `json:"result_msg,omitempty" xml:"result_msg,omitempty"`
+	// 会话ID
+	SessionId *string `json:"session_id,omitempty" xml:"session_id,omitempty"`
+	// 消息ID
+	MessageId *string `json:"message_id,omitempty" xml:"message_id,omitempty"`
+	// 消息状态
+	Status *string `json:"status,omitempty" xml:"status,omitempty"`
+	// 消息内容
+	Content *string `json:"content,omitempty" xml:"content,omitempty"`
+	// agent消息扩展信息
+	AssistantExtra *AssistantExtra `json:"assistant_extra,omitempty" xml:"assistant_extra,omitempty"`
+	// 当前会话的 Credit 计费总数
+	TotalCredit *string `json:"total_credit,omitempty" xml:"total_credit,omitempty"`
+}
+
+func (s QueryAntcloudMarketingagentCreativeResultResponse) String() string {
+	return tea.Prettify(s)
+}
+
+func (s QueryAntcloudMarketingagentCreativeResultResponse) GoString() string {
+	return s.String()
+}
+
+func (s *QueryAntcloudMarketingagentCreativeResultResponse) SetReqMsgId(v string) *QueryAntcloudMarketingagentCreativeResultResponse {
+	s.ReqMsgId = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentCreativeResultResponse) SetResultCode(v string) *QueryAntcloudMarketingagentCreativeResultResponse {
+	s.ResultCode = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentCreativeResultResponse) SetResultMsg(v string) *QueryAntcloudMarketingagentCreativeResultResponse {
+	s.ResultMsg = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentCreativeResultResponse) SetSessionId(v string) *QueryAntcloudMarketingagentCreativeResultResponse {
+	s.SessionId = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentCreativeResultResponse) SetMessageId(v string) *QueryAntcloudMarketingagentCreativeResultResponse {
+	s.MessageId = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentCreativeResultResponse) SetStatus(v string) *QueryAntcloudMarketingagentCreativeResultResponse {
+	s.Status = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentCreativeResultResponse) SetContent(v string) *QueryAntcloudMarketingagentCreativeResultResponse {
+	s.Content = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentCreativeResultResponse) SetAssistantExtra(v *AssistantExtra) *QueryAntcloudMarketingagentCreativeResultResponse {
+	s.AssistantExtra = v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentCreativeResultResponse) SetTotalCredit(v string) *QueryAntcloudMarketingagentCreativeResultResponse {
+	s.TotalCredit = &v
+	return s
+}
+
+type QueryAntcloudMarketingagentTaskCreditRequest struct {
+	// OAuth模式下的授权token
+	AuthToken *string `json:"auth_token,omitempty" xml:"auth_token,omitempty"`
+	// 从问数接口返回trace_id值
+	TraceId *string `json:"trace_id,omitempty" xml:"trace_id,omitempty" require:"true"`
+}
+
+func (s QueryAntcloudMarketingagentTaskCreditRequest) String() string {
+	return tea.Prettify(s)
+}
+
+func (s QueryAntcloudMarketingagentTaskCreditRequest) GoString() string {
+	return s.String()
+}
+
+func (s *QueryAntcloudMarketingagentTaskCreditRequest) SetAuthToken(v string) *QueryAntcloudMarketingagentTaskCreditRequest {
+	s.AuthToken = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentTaskCreditRequest) SetTraceId(v string) *QueryAntcloudMarketingagentTaskCreditRequest {
+	s.TraceId = &v
+	return s
+}
+
+type QueryAntcloudMarketingagentTaskCreditResponse struct {
+	// 请求唯一ID，用于链路跟踪和问题排查
+	ReqMsgId *string `json:"req_msg_id,omitempty" xml:"req_msg_id,omitempty"`
+	// 结果码，一般OK表示调用成功
+	ResultCode *string `json:"result_code,omitempty" xml:"result_code,omitempty"`
+	// 异常信息的文本描述
+	ResultMsg *string `json:"result_msg,omitempty" xml:"result_msg,omitempty"`
+	// credit消耗
+	Credits *string `json:"credits,omitempty" xml:"credits,omitempty"`
+}
+
+func (s QueryAntcloudMarketingagentTaskCreditResponse) String() string {
+	return tea.Prettify(s)
+}
+
+func (s QueryAntcloudMarketingagentTaskCreditResponse) GoString() string {
+	return s.String()
+}
+
+func (s *QueryAntcloudMarketingagentTaskCreditResponse) SetReqMsgId(v string) *QueryAntcloudMarketingagentTaskCreditResponse {
+	s.ReqMsgId = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentTaskCreditResponse) SetResultCode(v string) *QueryAntcloudMarketingagentTaskCreditResponse {
+	s.ResultCode = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentTaskCreditResponse) SetResultMsg(v string) *QueryAntcloudMarketingagentTaskCreditResponse {
+	s.ResultMsg = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentTaskCreditResponse) SetCredits(v string) *QueryAntcloudMarketingagentTaskCreditResponse {
+	s.Credits = &v
+	return s
+}
+
+type QueryAntcloudMarketingagentCreativeMaterialRequest struct {
+	// OAuth模式下的授权token
+	AuthToken *string `json:"auth_token,omitempty" xml:"auth_token,omitempty"`
+	// 页码，从1开始
+	PageNum *int64 `json:"page_num,omitempty" xml:"page_num,omitempty"`
+	// 每页条数
+	PageSize *int64 `json:"page_size,omitempty" xml:"page_size,omitempty"`
+	// Creative 行业产品代码：FUND / RETAIL，查询时缺省为 RETAIL
+	ProductCode *string `json:"product_code,omitempty" xml:"product_code,omitempty"`
+	// 空间类型：PERSONAL / ENTERPRISE
+	SpaceType *string `json:"space_type,omitempty" xml:"space_type,omitempty"`
+	// 素材类型，如 IMAGE / ANIMATION / FONT
+	MaterialType *string `json:"material_type,omitempty" xml:"material_type,omitempty"`
+	// 使用场景
+	Scene *string `json:"scene,omitempty" xml:"scene,omitempty"`
+	// 素材用途：REFERENCE_STYLE=参考样式，INPUT_ELEMENT=输入元素
+	MaterialUsage *string `json:"material_usage,omitempty" xml:"material_usage,omitempty"`
+	// 行业
+	Industry *string `json:"industry,omitempty" xml:"industry,omitempty"`
+	// 投放平台，支持多选，多个值使用英文逗号分隔
+	PublishPlatforms *string `json:"publish_platforms,omitempty" xml:"publish_platforms,omitempty"`
+	// 尺寸类型（16:9、9:16、1:1、4:3、3:4、OTHER）
+	MaterialSizeType *string `json:"material_size_type,omitempty" xml:"material_size_type,omitempty"`
+	// 搜索关键词
+	Keyword *string `json:"keyword,omitempty" xml:"keyword,omitempty"`
+	// 是否平铺展示（true 时展开素材包子素材，不返回素材包父记录）
+	Flatten *bool `json:"flatten,omitempty" xml:"flatten,omitempty"`
+}
+
+func (s QueryAntcloudMarketingagentCreativeMaterialRequest) String() string {
+	return tea.Prettify(s)
+}
+
+func (s QueryAntcloudMarketingagentCreativeMaterialRequest) GoString() string {
+	return s.String()
+}
+
+func (s *QueryAntcloudMarketingagentCreativeMaterialRequest) SetAuthToken(v string) *QueryAntcloudMarketingagentCreativeMaterialRequest {
+	s.AuthToken = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentCreativeMaterialRequest) SetPageNum(v int64) *QueryAntcloudMarketingagentCreativeMaterialRequest {
+	s.PageNum = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentCreativeMaterialRequest) SetPageSize(v int64) *QueryAntcloudMarketingagentCreativeMaterialRequest {
+	s.PageSize = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentCreativeMaterialRequest) SetProductCode(v string) *QueryAntcloudMarketingagentCreativeMaterialRequest {
+	s.ProductCode = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentCreativeMaterialRequest) SetSpaceType(v string) *QueryAntcloudMarketingagentCreativeMaterialRequest {
+	s.SpaceType = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentCreativeMaterialRequest) SetMaterialType(v string) *QueryAntcloudMarketingagentCreativeMaterialRequest {
+	s.MaterialType = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentCreativeMaterialRequest) SetScene(v string) *QueryAntcloudMarketingagentCreativeMaterialRequest {
+	s.Scene = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentCreativeMaterialRequest) SetMaterialUsage(v string) *QueryAntcloudMarketingagentCreativeMaterialRequest {
+	s.MaterialUsage = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentCreativeMaterialRequest) SetIndustry(v string) *QueryAntcloudMarketingagentCreativeMaterialRequest {
+	s.Industry = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentCreativeMaterialRequest) SetPublishPlatforms(v string) *QueryAntcloudMarketingagentCreativeMaterialRequest {
+	s.PublishPlatforms = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentCreativeMaterialRequest) SetMaterialSizeType(v string) *QueryAntcloudMarketingagentCreativeMaterialRequest {
+	s.MaterialSizeType = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentCreativeMaterialRequest) SetKeyword(v string) *QueryAntcloudMarketingagentCreativeMaterialRequest {
+	s.Keyword = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentCreativeMaterialRequest) SetFlatten(v bool) *QueryAntcloudMarketingagentCreativeMaterialRequest {
+	s.Flatten = &v
+	return s
+}
+
+type QueryAntcloudMarketingagentCreativeMaterialResponse struct {
+	// 请求唯一ID，用于链路跟踪和问题排查
+	ReqMsgId *string `json:"req_msg_id,omitempty" xml:"req_msg_id,omitempty"`
+	// 结果码，一般OK表示调用成功
+	ResultCode *string `json:"result_code,omitempty" xml:"result_code,omitempty"`
+	// 异常信息的文本描述
+	ResultMsg *string `json:"result_msg,omitempty" xml:"result_msg,omitempty"`
+	// 总记录数
+	TotalCount *int64 `json:"total_count,omitempty" xml:"total_count,omitempty"`
+	// 当前页码
+	PageNum *int64 `json:"page_num,omitempty" xml:"page_num,omitempty"`
+	// 每页条数
+	PageSize *int64 `json:"page_size,omitempty" xml:"page_size,omitempty"`
+	// 总页数
+	PageCount *int64 `json:"page_count,omitempty" xml:"page_count,omitempty"`
+	// 当前页素材列表
+	Materials []*CreativeMaterial `json:"materials,omitempty" xml:"materials,omitempty" type:"Repeated"`
+}
+
+func (s QueryAntcloudMarketingagentCreativeMaterialResponse) String() string {
+	return tea.Prettify(s)
+}
+
+func (s QueryAntcloudMarketingagentCreativeMaterialResponse) GoString() string {
+	return s.String()
+}
+
+func (s *QueryAntcloudMarketingagentCreativeMaterialResponse) SetReqMsgId(v string) *QueryAntcloudMarketingagentCreativeMaterialResponse {
+	s.ReqMsgId = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentCreativeMaterialResponse) SetResultCode(v string) *QueryAntcloudMarketingagentCreativeMaterialResponse {
+	s.ResultCode = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentCreativeMaterialResponse) SetResultMsg(v string) *QueryAntcloudMarketingagentCreativeMaterialResponse {
+	s.ResultMsg = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentCreativeMaterialResponse) SetTotalCount(v int64) *QueryAntcloudMarketingagentCreativeMaterialResponse {
+	s.TotalCount = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentCreativeMaterialResponse) SetPageNum(v int64) *QueryAntcloudMarketingagentCreativeMaterialResponse {
+	s.PageNum = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentCreativeMaterialResponse) SetPageSize(v int64) *QueryAntcloudMarketingagentCreativeMaterialResponse {
+	s.PageSize = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentCreativeMaterialResponse) SetPageCount(v int64) *QueryAntcloudMarketingagentCreativeMaterialResponse {
+	s.PageCount = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentCreativeMaterialResponse) SetMaterials(v []*CreativeMaterial) *QueryAntcloudMarketingagentCreativeMaterialResponse {
+	s.Materials = v
+	return s
+}
+
+type ExecAntcloudMarketingagentCreativeVideoRequest struct {
+	// OAuth模式下的授权token
+	AuthToken *string `json:"auth_token,omitempty" xml:"auth_token,omitempty"`
+	// 视频描述，文生视频、图生视频均不能为空
+	Prompt *string `json:"prompt,omitempty" xml:"prompt,omitempty" require:"true"`
+	// 参考图片，最多 5 张；不传或空数组表示文生视频
+	InputElements []*CreativeAssetRef `json:"input_elements,omitempty" xml:"input_elements,omitempty" type:"Repeated"`
+	// 模型标识，不传使用服务端默认模型；可用值需与上游确认
+	Model *string `json:"model,omitempty" xml:"model,omitempty"`
+	// STORE_VISIT_VIDEO：探店视频；PRODUCT_PROMOTION_VIDEO：带货视频
+	Scene *string `json:"scene,omitempty" xml:"scene,omitempty"`
+	// 支持 9:16、1:1、16:9、4:3、3:4，默认 9:16
+	Ratio *string `json:"ratio,omitempty" xml:"ratio,omitempty"`
+	// 视频时长，单位秒，4～30 的整数，默认 15
+	Duration *int64 `json:"duration,omitempty" xml:"duration,omitempty"`
+	// 分辨率，支持 480、720、1080，默认 720
+	Resolution *int64 `json:"resolution,omitempty" xml:"resolution,omitempty"`
+	// 是否生成音频，默认 true
+	GenerateAudio *bool `json:"generate_audio,omitempty" xml:"generate_audio,omitempty"`
+	// 是否扩写脚本，默认true
+	ExpandScript *bool `json:"expand_script,omitempty" xml:"expand_script,omitempty"`
+	// 是否生成字幕，默认 true
+	GenerateSubtitle *bool `json:"generate_subtitle,omitempty" xml:"generate_subtitle,omitempty"`
+}
+
+func (s ExecAntcloudMarketingagentCreativeVideoRequest) String() string {
+	return tea.Prettify(s)
+}
+
+func (s ExecAntcloudMarketingagentCreativeVideoRequest) GoString() string {
+	return s.String()
+}
+
+func (s *ExecAntcloudMarketingagentCreativeVideoRequest) SetAuthToken(v string) *ExecAntcloudMarketingagentCreativeVideoRequest {
+	s.AuthToken = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentCreativeVideoRequest) SetPrompt(v string) *ExecAntcloudMarketingagentCreativeVideoRequest {
+	s.Prompt = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentCreativeVideoRequest) SetInputElements(v []*CreativeAssetRef) *ExecAntcloudMarketingagentCreativeVideoRequest {
+	s.InputElements = v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentCreativeVideoRequest) SetModel(v string) *ExecAntcloudMarketingagentCreativeVideoRequest {
+	s.Model = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentCreativeVideoRequest) SetScene(v string) *ExecAntcloudMarketingagentCreativeVideoRequest {
+	s.Scene = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentCreativeVideoRequest) SetRatio(v string) *ExecAntcloudMarketingagentCreativeVideoRequest {
+	s.Ratio = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentCreativeVideoRequest) SetDuration(v int64) *ExecAntcloudMarketingagentCreativeVideoRequest {
+	s.Duration = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentCreativeVideoRequest) SetResolution(v int64) *ExecAntcloudMarketingagentCreativeVideoRequest {
+	s.Resolution = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentCreativeVideoRequest) SetGenerateAudio(v bool) *ExecAntcloudMarketingagentCreativeVideoRequest {
+	s.GenerateAudio = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentCreativeVideoRequest) SetExpandScript(v bool) *ExecAntcloudMarketingagentCreativeVideoRequest {
+	s.ExpandScript = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentCreativeVideoRequest) SetGenerateSubtitle(v bool) *ExecAntcloudMarketingagentCreativeVideoRequest {
+	s.GenerateSubtitle = &v
+	return s
+}
+
+type ExecAntcloudMarketingagentCreativeVideoResponse struct {
+	// 请求唯一ID，用于链路跟踪和问题排查
+	ReqMsgId *string `json:"req_msg_id,omitempty" xml:"req_msg_id,omitempty"`
+	// 结果码，一般OK表示调用成功
+	ResultCode *string `json:"result_code,omitempty" xml:"result_code,omitempty"`
+	// 异常信息的文本描述
+	ResultMsg *string `json:"result_msg,omitempty" xml:"result_msg,omitempty"`
+	// 本服务分配的稳定任务 ID，用于查询
+	TaskId *string `json:"task_id,omitempty" xml:"task_id,omitempty"`
+	// 视频任务状态
+	Status *string `json:"status,omitempty" xml:"status,omitempty"`
+}
+
+func (s ExecAntcloudMarketingagentCreativeVideoResponse) String() string {
+	return tea.Prettify(s)
+}
+
+func (s ExecAntcloudMarketingagentCreativeVideoResponse) GoString() string {
+	return s.String()
+}
+
+func (s *ExecAntcloudMarketingagentCreativeVideoResponse) SetReqMsgId(v string) *ExecAntcloudMarketingagentCreativeVideoResponse {
+	s.ReqMsgId = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentCreativeVideoResponse) SetResultCode(v string) *ExecAntcloudMarketingagentCreativeVideoResponse {
+	s.ResultCode = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentCreativeVideoResponse) SetResultMsg(v string) *ExecAntcloudMarketingagentCreativeVideoResponse {
+	s.ResultMsg = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentCreativeVideoResponse) SetTaskId(v string) *ExecAntcloudMarketingagentCreativeVideoResponse {
+	s.TaskId = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentCreativeVideoResponse) SetStatus(v string) *ExecAntcloudMarketingagentCreativeVideoResponse {
+	s.Status = &v
+	return s
+}
+
+type QueryAntcloudMarketingagentCreativeVideoRequest struct {
+	// OAuth模式下的授权token
+	AuthToken *string `json:"auth_token,omitempty" xml:"auth_token,omitempty"`
+	// 创建接口返回的任务 ID
+	TaskId *string `json:"task_id,omitempty" xml:"task_id,omitempty" require:"true"`
+}
+
+func (s QueryAntcloudMarketingagentCreativeVideoRequest) String() string {
+	return tea.Prettify(s)
+}
+
+func (s QueryAntcloudMarketingagentCreativeVideoRequest) GoString() string {
+	return s.String()
+}
+
+func (s *QueryAntcloudMarketingagentCreativeVideoRequest) SetAuthToken(v string) *QueryAntcloudMarketingagentCreativeVideoRequest {
+	s.AuthToken = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentCreativeVideoRequest) SetTaskId(v string) *QueryAntcloudMarketingagentCreativeVideoRequest {
+	s.TaskId = &v
+	return s
+}
+
+type QueryAntcloudMarketingagentCreativeVideoResponse struct {
+	// 请求唯一ID，用于链路跟踪和问题排查
+	ReqMsgId *string `json:"req_msg_id,omitempty" xml:"req_msg_id,omitempty"`
+	// 结果码，一般OK表示调用成功
+	ResultCode *string `json:"result_code,omitempty" xml:"result_code,omitempty"`
+	// 异常信息的文本描述
+	ResultMsg *string `json:"result_msg,omitempty" xml:"result_msg,omitempty"`
+	// 视频任务 ID
+	TaskId *string `json:"task_id,omitempty" xml:"task_id,omitempty"`
+	// PENDING、PROCESSING、COMPLETED、FAILED
+	Status *string `json:"status,omitempty" xml:"status,omitempty"`
+	// 视频产物列表
+	Outputs []*VideoOutput `json:"outputs,omitempty" xml:"outputs,omitempty" type:"Repeated"`
+	// 扩写后的脚本，上游提供时返回
+	Script *string `json:"script,omitempty" xml:"script,omitempty"`
+	// 视频耗费credits
+	Credits *string `json:"credits,omitempty" xml:"credits,omitempty"`
+	// 任务失败原因
+	ErrorMessage *string `json:"error_message,omitempty" xml:"error_message,omitempty"`
+}
+
+func (s QueryAntcloudMarketingagentCreativeVideoResponse) String() string {
+	return tea.Prettify(s)
+}
+
+func (s QueryAntcloudMarketingagentCreativeVideoResponse) GoString() string {
+	return s.String()
+}
+
+func (s *QueryAntcloudMarketingagentCreativeVideoResponse) SetReqMsgId(v string) *QueryAntcloudMarketingagentCreativeVideoResponse {
+	s.ReqMsgId = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentCreativeVideoResponse) SetResultCode(v string) *QueryAntcloudMarketingagentCreativeVideoResponse {
+	s.ResultCode = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentCreativeVideoResponse) SetResultMsg(v string) *QueryAntcloudMarketingagentCreativeVideoResponse {
+	s.ResultMsg = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentCreativeVideoResponse) SetTaskId(v string) *QueryAntcloudMarketingagentCreativeVideoResponse {
+	s.TaskId = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentCreativeVideoResponse) SetStatus(v string) *QueryAntcloudMarketingagentCreativeVideoResponse {
+	s.Status = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentCreativeVideoResponse) SetOutputs(v []*VideoOutput) *QueryAntcloudMarketingagentCreativeVideoResponse {
+	s.Outputs = v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentCreativeVideoResponse) SetScript(v string) *QueryAntcloudMarketingagentCreativeVideoResponse {
+	s.Script = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentCreativeVideoResponse) SetCredits(v string) *QueryAntcloudMarketingagentCreativeVideoResponse {
+	s.Credits = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentCreativeVideoResponse) SetErrorMessage(v string) *QueryAntcloudMarketingagentCreativeVideoResponse {
+	s.ErrorMessage = &v
+	return s
+}
+
+type ExecAntcloudMarketingagentCreativeImageeditRequest struct {
+	// OAuth模式下的授权token
+	AuthToken *string `json:"auth_token,omitempty" xml:"auth_token,omitempty"`
+	// 产品代码，当前仅支持 FUND（基金）。
+	ProductCode *string `json:"product_code,omitempty" xml:"product_code,omitempty" require:"true"`
+	// 来源子图成功版本 ID，必须属于当前调用用户及租户；可使用子图列表中的成功版本或上一轮编辑成功返回的新版本。
+	SegmentVersionId *string `json:"segment_version_id,omitempty" xml:"segment_version_id,omitempty" require:"true"`
+	// 本轮图片修改要求，不能为空。源图和输出宽高由服务端根据来源版本解析。
+	Prompt *string `json:"prompt,omitempty" xml:"prompt,omitempty" require:"true"`
+}
+
+func (s ExecAntcloudMarketingagentCreativeImageeditRequest) String() string {
+	return tea.Prettify(s)
+}
+
+func (s ExecAntcloudMarketingagentCreativeImageeditRequest) GoString() string {
+	return s.String()
+}
+
+func (s *ExecAntcloudMarketingagentCreativeImageeditRequest) SetAuthToken(v string) *ExecAntcloudMarketingagentCreativeImageeditRequest {
+	s.AuthToken = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentCreativeImageeditRequest) SetProductCode(v string) *ExecAntcloudMarketingagentCreativeImageeditRequest {
+	s.ProductCode = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentCreativeImageeditRequest) SetSegmentVersionId(v string) *ExecAntcloudMarketingagentCreativeImageeditRequest {
+	s.SegmentVersionId = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentCreativeImageeditRequest) SetPrompt(v string) *ExecAntcloudMarketingagentCreativeImageeditRequest {
+	s.Prompt = &v
+	return s
+}
+
+type ExecAntcloudMarketingagentCreativeImageeditResponse struct {
+	// 请求唯一ID，用于链路跟踪和问题排查
+	ReqMsgId *string `json:"req_msg_id,omitempty" xml:"req_msg_id,omitempty"`
+	// 结果码，一般OK表示调用成功
+	ResultCode *string `json:"result_code,omitempty" xml:"result_code,omitempty"`
+	// 异常信息的文本描述
+	ResultMsg *string `json:"result_msg,omitempty" xml:"result_msg,omitempty"`
+	// 本次子图编辑任务的独立消息 ID，用于调用子图编辑查询接口获取进度和结果。
+	MessageId *string `json:"message_id,omitempty" xml:"message_id,omitempty"`
+	// 本次编辑新建的版本 ID。任务提交成功不代表图片生成成功；查询确认成功后可作为下一轮修改来源。
+	SegmentVersionId *string `json:"segment_version_id,omitempty" xml:"segment_version_id,omitempty"`
+}
+
+func (s ExecAntcloudMarketingagentCreativeImageeditResponse) String() string {
+	return tea.Prettify(s)
+}
+
+func (s ExecAntcloudMarketingagentCreativeImageeditResponse) GoString() string {
+	return s.String()
+}
+
+func (s *ExecAntcloudMarketingagentCreativeImageeditResponse) SetReqMsgId(v string) *ExecAntcloudMarketingagentCreativeImageeditResponse {
+	s.ReqMsgId = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentCreativeImageeditResponse) SetResultCode(v string) *ExecAntcloudMarketingagentCreativeImageeditResponse {
+	s.ResultCode = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentCreativeImageeditResponse) SetResultMsg(v string) *ExecAntcloudMarketingagentCreativeImageeditResponse {
+	s.ResultMsg = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentCreativeImageeditResponse) SetMessageId(v string) *ExecAntcloudMarketingagentCreativeImageeditResponse {
+	s.MessageId = &v
+	return s
+}
+
+func (s *ExecAntcloudMarketingagentCreativeImageeditResponse) SetSegmentVersionId(v string) *ExecAntcloudMarketingagentCreativeImageeditResponse {
+	s.SegmentVersionId = &v
+	return s
+}
+
+type QueryAntcloudMarketingagentCreativeImageeditRequest struct {
+	// OAuth模式下的授权token
+	AuthToken *string `json:"auth_token,omitempty" xml:"auth_token,omitempty"`
+	// 子图编辑接口返回的独立消息 ID，必须属于当前调用用户及租户。
+	MessageId *string `json:"message_id,omitempty" xml:"message_id,omitempty" require:"true"`
+}
+
+func (s QueryAntcloudMarketingagentCreativeImageeditRequest) String() string {
+	return tea.Prettify(s)
+}
+
+func (s QueryAntcloudMarketingagentCreativeImageeditRequest) GoString() string {
+	return s.String()
+}
+
+func (s *QueryAntcloudMarketingagentCreativeImageeditRequest) SetAuthToken(v string) *QueryAntcloudMarketingagentCreativeImageeditRequest {
+	s.AuthToken = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentCreativeImageeditRequest) SetMessageId(v string) *QueryAntcloudMarketingagentCreativeImageeditRequest {
+	s.MessageId = &v
+	return s
+}
+
+type QueryAntcloudMarketingagentCreativeImageeditResponse struct {
+	// 请求唯一ID，用于链路跟踪和问题排查
+	ReqMsgId *string `json:"req_msg_id,omitempty" xml:"req_msg_id,omitempty"`
+	// 结果码，一般OK表示调用成功
+	ResultCode *string `json:"result_code,omitempty" xml:"result_code,omitempty"`
+	// 异常信息的文本描述
+	ResultMsg *string `json:"result_msg,omitempty" xml:"result_msg,omitempty"`
+	// 本次子图编辑任务的独立消息 ID。
+	MessageId *string `json:"message_id,omitempty" xml:"message_id,omitempty"`
+	// 本次编辑生成的新版本 ID，任务成功后可作为下一轮编辑的来源版本。
+	SegmentVersionId *string `json:"segment_version_id,omitempty" xml:"segment_version_id,omitempty"`
+	// 任务状态：PROCESSING（处理中）、COMPLETED（成功）、FAILED（失败）。查询接口调用成功不代表任务生成成功。
+	Status *string `json:"status,omitempty" xml:"status,omitempty"`
+	// 编辑成功后的图片地址，仅在 status 为 COMPLETED 时返回。
+	ResultUrl *string `json:"result_url,omitempty" xml:"result_url,omitempty"`
+	// 编辑失败原因，在 status 为 FAILED 时返回。
+	FailReason *string `json:"fail_reason,omitempty" xml:"fail_reason,omitempty"`
+}
+
+func (s QueryAntcloudMarketingagentCreativeImageeditResponse) String() string {
+	return tea.Prettify(s)
+}
+
+func (s QueryAntcloudMarketingagentCreativeImageeditResponse) GoString() string {
+	return s.String()
+}
+
+func (s *QueryAntcloudMarketingagentCreativeImageeditResponse) SetReqMsgId(v string) *QueryAntcloudMarketingagentCreativeImageeditResponse {
+	s.ReqMsgId = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentCreativeImageeditResponse) SetResultCode(v string) *QueryAntcloudMarketingagentCreativeImageeditResponse {
+	s.ResultCode = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentCreativeImageeditResponse) SetResultMsg(v string) *QueryAntcloudMarketingagentCreativeImageeditResponse {
+	s.ResultMsg = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentCreativeImageeditResponse) SetMessageId(v string) *QueryAntcloudMarketingagentCreativeImageeditResponse {
+	s.MessageId = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentCreativeImageeditResponse) SetSegmentVersionId(v string) *QueryAntcloudMarketingagentCreativeImageeditResponse {
+	s.SegmentVersionId = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentCreativeImageeditResponse) SetStatus(v string) *QueryAntcloudMarketingagentCreativeImageeditResponse {
+	s.Status = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentCreativeImageeditResponse) SetResultUrl(v string) *QueryAntcloudMarketingagentCreativeImageeditResponse {
+	s.ResultUrl = &v
+	return s
+}
+
+func (s *QueryAntcloudMarketingagentCreativeImageeditResponse) SetFailReason(v string) *QueryAntcloudMarketingagentCreativeImageeditResponse {
+	s.FailReason = &v
+	return s
+}
+
+type Client struct {
+	Endpoint                *string
+	RegionId                *string
+	AccessKeyId             *string
+	AccessKeySecret         *string
+	Protocol                *string
+	UserAgent               *string
+	ReadTimeout             *int
+	ConnectTimeout          *int
+	HttpProxy               *string
+	HttpsProxy              *string
+	Socks5Proxy             *string
+	Socks5NetWork           *string
+	NoProxy                 *string
+	MaxIdleConns            *int
+	SecurityToken           *string
+	MaxIdleTimeMillis       *int
+	KeepAliveDurationMillis *int
+	MaxRequests             *int
+	MaxRequestsPerHost      *int
+}
+
+// Description:
+//
+// # Init client with Config
+//
+// @param config - config contains the necessary information to create a client
+func NewClient(config *Config) (*Client, error) {
+	client := new(Client)
+	err := client.Init(config)
+	return client, err
+}
+
+func (client *Client) Init(config *Config) (_err error) {
+	if tea.BoolValue(util.IsUnset(config)) {
+		_err = tea.NewSDKError(map[string]interface{}{
+			"code":    "ParameterMissing",
+			"message": "'config' can not be unset",
+		})
+		return _err
+	}
+
+	client.AccessKeyId = config.AccessKeyId
+	client.AccessKeySecret = config.AccessKeySecret
+	client.SecurityToken = config.SecurityToken
+	client.Endpoint = config.Endpoint
+	client.Protocol = config.Protocol
+	client.UserAgent = config.UserAgent
+	client.ReadTimeout = util.DefaultNumber(config.ReadTimeout, tea.Int(20000))
+	client.ConnectTimeout = util.DefaultNumber(config.ConnectTimeout, tea.Int(20000))
+	client.HttpProxy = config.HttpProxy
+	client.HttpsProxy = config.HttpsProxy
+	client.NoProxy = config.NoProxy
+	client.Socks5Proxy = config.Socks5Proxy
+	client.Socks5NetWork = config.Socks5NetWork
+	client.MaxIdleConns = util.DefaultNumber(config.MaxIdleConns, tea.Int(60000))
+	client.MaxIdleTimeMillis = util.DefaultNumber(config.MaxIdleTimeMillis, tea.Int(5))
+	client.KeepAliveDurationMillis = util.DefaultNumber(config.KeepAliveDurationMillis, tea.Int(5000))
+	client.MaxRequests = util.DefaultNumber(config.MaxRequests, tea.Int(100))
+	client.MaxRequestsPerHost = util.DefaultNumber(config.MaxRequestsPerHost, tea.Int(100))
+	return nil
+}
+
+// Description:
+//
+// # Encapsulate the request and invoke the network
+//
+// @param action - api name
+//
+// @param protocol - http or https
+//
+// @param method - e.g. GET
+//
+// @param pathname - pathname of every api
+//
+// @param request - which contains request params
+//
+// @param runtime - which controls some details of call api, such as retry times
+//
+// @return the response
+func (client *Client) DoRequest(version *string, action *string, protocol *string, method *string, pathname *string, request map[string]interface{}, headers map[string]*string, runtime *util.RuntimeOptions) (_result map[string]interface{}, _err error) {
+	_err = tea.Validate(runtime)
+	if _err != nil {
+		return _result, _err
+	}
+	_runtime := map[string]interface{}{
+		"timeouted":          "retry",
+		"readTimeout":        tea.IntValue(util.DefaultNumber(runtime.ReadTimeout, client.ReadTimeout)),
+		"connectTimeout":     tea.IntValue(util.DefaultNumber(runtime.ConnectTimeout, client.ConnectTimeout)),
+		"httpProxy":          tea.StringValue(util.DefaultString(runtime.HttpProxy, client.HttpProxy)),
+		"httpsProxy":         tea.StringValue(util.DefaultString(runtime.HttpsProxy, client.HttpsProxy)),
+		"noProxy":            tea.StringValue(util.DefaultString(runtime.NoProxy, client.NoProxy)),
+		"maxIdleConns":       tea.IntValue(util.DefaultNumber(runtime.MaxIdleConns, client.MaxIdleConns)),
+		"maxIdleTimeMillis":  tea.IntValue(client.MaxIdleTimeMillis),
+		"keepAliveDuration":  tea.IntValue(client.KeepAliveDurationMillis),
+		"maxRequests":        tea.IntValue(client.MaxRequests),
+		"maxRequestsPerHost": tea.IntValue(client.MaxRequestsPerHost),
+		"retry": map[string]interface{}{
+			"retryable":   tea.BoolValue(runtime.Autoretry),
+			"maxAttempts": tea.IntValue(util.DefaultNumber(runtime.MaxAttempts, tea.Int(3))),
+		},
+		"backoff": map[string]interface{}{
+			"policy": tea.StringValue(util.DefaultString(runtime.BackoffPolicy, tea.String("no"))),
+			"period": tea.IntValue(util.DefaultNumber(runtime.BackoffPeriod, tea.Int(1))),
+		},
+		"ignoreSSL": tea.BoolValue(runtime.IgnoreSSL),
+	}
+
+	_resp := make(map[string]interface{})
+	for _retryTimes := 0; tea.BoolValue(tea.AllowRetry(_runtime["retry"], tea.Int(_retryTimes))); _retryTimes++ {
+		if _retryTimes > 0 {
+			_backoffTime := tea.GetBackoffTime(_runtime["backoff"], tea.Int(_retryTimes))
+			if tea.IntValue(_backoffTime) > 0 {
+				tea.Sleep(_backoffTime)
+			}
+		}
+
+		_resp, _err = func() (map[string]interface{}, error) {
+			request_ := tea.NewRequest()
+			request_.Protocol = util.DefaultString(client.Protocol, protocol)
+			request_.Method = method
+			request_.Pathname = pathname
+			request_.Query = map[string]*string{
+				"method":           action,
+				"version":          version,
+				"sign_type":        tea.String("HmacSHA1"),
+				"req_time":         antchainutil.GetTimestamp(),
+				"req_msg_id":       antchainutil.GetNonce(),
+				"access_key":       client.AccessKeyId,
+				"base_sdk_version": tea.String("TeaSDK-2.0"),
+				"sdk_version":      tea.String("2.1.2"),
+				"_prod_code":       tea.String("CREATIVERENDER"),
+				"_prod_channel":    tea.String("default"),
+			}
+			if !tea.BoolValue(util.Empty(client.SecurityToken)) {
+				request_.Query["security_token"] = client.SecurityToken
+			}
+
+			request_.Headers = tea.Merge(map[string]*string{
+				"host":       util.DefaultString(client.Endpoint, tea.String("openapi.antchain.antgroup.com")),
+				"user-agent": util.GetUserAgent(client.UserAgent),
+			}, headers)
+			tmp := util.AnyifyMapValue(rpcutil.Query(request))
+			request_.Body = tea.ToReader(util.ToFormString(tmp))
+			request_.Headers["content-type"] = tea.String("application/x-www-form-urlencoded")
+			signedParam := tea.Merge(request_.Query,
+				rpcutil.Query(request))
+			request_.Query["sign"] = antchainutil.GetSignature(signedParam, client.AccessKeySecret)
+			response_, _err := tea.DoRequest(request_, _runtime)
+			if _err != nil {
+				return _result, _err
+			}
+			raw, _err := util.ReadAsString(response_.Body)
+			if _err != nil {
+				return _result, _err
+			}
+
+			obj := util.ParseJSON(raw)
+			res, _err := util.AssertAsMap(obj)
+			if _err != nil {
+				return _result, _err
+			}
+
+			resp, _err := util.AssertAsMap(res["response"])
+			if _err != nil {
+				return _result, _err
+			}
+
+			if tea.BoolValue(antchainutil.HasError(raw, client.AccessKeySecret)) {
+				_err = tea.NewSDKError(map[string]interface{}{
+					"message": resp["result_msg"],
+					"data":    resp,
+					"code":    resp["result_code"],
+				})
+				return _result, _err
+			}
+
+			_result = resp
+			return _result, _err
+		}()
+		if !tea.BoolValue(tea.Retryable(_err)) {
+			break
+		}
+	}
+
+	return _resp, _err
+}
+
+// Description:
+//
+// Description: 创意素材中心chat生图接口
+//
+// Summary: 创意素材中心chat生图接口
+func (client *Client) ExecAntcloudMarketingagentChatCreative(request *ExecAntcloudMarketingagentChatCreativeRequest) (_result *ExecAntcloudMarketingagentChatCreativeResponse, _err error) {
+	runtime := &util.RuntimeOptions{}
+	headers := make(map[string]*string)
+	_result = &ExecAntcloudMarketingagentChatCreativeResponse{}
+	_body, _err := client.ExecAntcloudMarketingagentChatCreativeEx(request, headers, runtime)
+	if _err != nil {
+		return _result, _err
+	}
+	_result = _body
+	return _result, _err
+}
+
+// Description:
+//
+// Description: 创意素材中心chat生图接口
+//
+// Summary: 创意素材中心chat生图接口
+func (client *Client) ExecAntcloudMarketingagentChatCreativeEx(request *ExecAntcloudMarketingagentChatCreativeRequest, headers map[string]*string, runtime *util.RuntimeOptions) (_result *ExecAntcloudMarketingagentChatCreativeResponse, _err error) {
+	_err = util.ValidateModel(request)
+	if _err != nil {
+		return _result, _err
+	}
+	_result = &ExecAntcloudMarketingagentChatCreativeResponse{}
+	_body, _err := client.DoRequest(tea.String("1.0"), tea.String("antcloud.marketingagent.chat.creative.exec"), tea.String("HTTPS"), tea.String("POST"), tea.String("/gateway.do"), tea.ToMap(request), headers, runtime)
+	if _err != nil {
+		return _result, _err
+	}
+	_err = tea.Convert(_body, &_result)
+	return _result, _err
+}
+
+// Description:
+//
+// Description: 创意素材chat接口
+//
+// Summary: 创意素材chat接口
+func (client *Client) ExecAntcloudMarketingagentCreativeChat(request *ExecAntcloudMarketingagentCreativeChatRequest) (_result *ExecAntcloudMarketingagentCreativeChatResponse, _err error) {
+	runtime := &util.RuntimeOptions{}
+	headers := make(map[string]*string)
+	_result = &ExecAntcloudMarketingagentCreativeChatResponse{}
+	_body, _err := client.ExecAntcloudMarketingagentCreativeChatEx(request, headers, runtime)
+	if _err != nil {
+		return _result, _err
+	}
+	_result = _body
+	return _result, _err
+}
+
+// Description:
+//
+// Description: 创意素材chat接口
+//
+// Summary: 创意素材chat接口
+func (client *Client) ExecAntcloudMarketingagentCreativeChatEx(request *ExecAntcloudMarketingagentCreativeChatRequest, headers map[string]*string, runtime *util.RuntimeOptions) (_result *ExecAntcloudMarketingagentCreativeChatResponse, _err error) {
+	_err = util.ValidateModel(request)
+	if _err != nil {
+		return _result, _err
+	}
+	_result = &ExecAntcloudMarketingagentCreativeChatResponse{}
+	_body, _err := client.DoRequest(tea.String("1.0"), tea.String("antcloud.marketingagent.creative.chat.exec"), tea.String("HTTPS"), tea.String("POST"), tea.String("/gateway.do"), tea.ToMap(request), headers, runtime)
+	if _err != nil {
+		return _result, _err
+	}
+	_err = tea.Convert(_body, &_result)
+	return _result, _err
+}
+
+// Description:
+//
+// Description: chat结果查询接口
+//
+// Summary: chat结果查询接口
+func (client *Client) QueryAntcloudMarketingagentCreativeResult(request *QueryAntcloudMarketingagentCreativeResultRequest) (_result *QueryAntcloudMarketingagentCreativeResultResponse, _err error) {
+	runtime := &util.RuntimeOptions{}
+	headers := make(map[string]*string)
+	_result = &QueryAntcloudMarketingagentCreativeResultResponse{}
+	_body, _err := client.QueryAntcloudMarketingagentCreativeResultEx(request, headers, runtime)
+	if _err != nil {
+		return _result, _err
+	}
+	_result = _body
+	return _result, _err
+}
+
+// Description:
+//
+// Description: chat结果查询接口
+//
+// Summary: chat结果查询接口
+func (client *Client) QueryAntcloudMarketingagentCreativeResultEx(request *QueryAntcloudMarketingagentCreativeResultRequest, headers map[string]*string, runtime *util.RuntimeOptions) (_result *QueryAntcloudMarketingagentCreativeResultResponse, _err error) {
+	_err = util.ValidateModel(request)
+	if _err != nil {
+		return _result, _err
+	}
+	_result = &QueryAntcloudMarketingagentCreativeResultResponse{}
+	_body, _err := client.DoRequest(tea.String("1.0"), tea.String("antcloud.marketingagent.creative.result.query"), tea.String("HTTPS"), tea.String("POST"), tea.String("/gateway.do"), tea.ToMap(request), headers, runtime)
+	if _err != nil {
+		return _result, _err
+	}
+	_err = tea.Convert(_body, &_result)
+	return _result, _err
+}
+
+// Description:
+//
+// Description: credit查询
+//
+// Summary: credit查询
+func (client *Client) QueryAntcloudMarketingagentTaskCredit(request *QueryAntcloudMarketingagentTaskCreditRequest) (_result *QueryAntcloudMarketingagentTaskCreditResponse, _err error) {
+	runtime := &util.RuntimeOptions{}
+	headers := make(map[string]*string)
+	_result = &QueryAntcloudMarketingagentTaskCreditResponse{}
+	_body, _err := client.QueryAntcloudMarketingagentTaskCreditEx(request, headers, runtime)
+	if _err != nil {
+		return _result, _err
+	}
+	_result = _body
+	return _result, _err
+}
+
+// Description:
+//
+// Description: credit查询
+//
+// Summary: credit查询
+func (client *Client) QueryAntcloudMarketingagentTaskCreditEx(request *QueryAntcloudMarketingagentTaskCreditRequest, headers map[string]*string, runtime *util.RuntimeOptions) (_result *QueryAntcloudMarketingagentTaskCreditResponse, _err error) {
+	_err = util.ValidateModel(request)
+	if _err != nil {
+		return _result, _err
+	}
+	_result = &QueryAntcloudMarketingagentTaskCreditResponse{}
+	_body, _err := client.DoRequest(tea.String("1.0"), tea.String("antcloud.marketingagent.task.credit.query"), tea.String("HTTPS"), tea.String("POST"), tea.String("/gateway.do"), tea.ToMap(request), headers, runtime)
+	if _err != nil {
+		return _result, _err
+	}
+	_err = tea.Convert(_body, &_result)
+	return _result, _err
+}
+
+// Description:
+//
+// Description: 素材查询接口
+//
+// Summary: 素材查询接口
+func (client *Client) QueryAntcloudMarketingagentCreativeMaterial(request *QueryAntcloudMarketingagentCreativeMaterialRequest) (_result *QueryAntcloudMarketingagentCreativeMaterialResponse, _err error) {
+	runtime := &util.RuntimeOptions{}
+	headers := make(map[string]*string)
+	_result = &QueryAntcloudMarketingagentCreativeMaterialResponse{}
+	_body, _err := client.QueryAntcloudMarketingagentCreativeMaterialEx(request, headers, runtime)
+	if _err != nil {
+		return _result, _err
+	}
+	_result = _body
+	return _result, _err
+}
+
+// Description:
+//
+// Description: 素材查询接口
+//
+// Summary: 素材查询接口
+func (client *Client) QueryAntcloudMarketingagentCreativeMaterialEx(request *QueryAntcloudMarketingagentCreativeMaterialRequest, headers map[string]*string, runtime *util.RuntimeOptions) (_result *QueryAntcloudMarketingagentCreativeMaterialResponse, _err error) {
+	_err = util.ValidateModel(request)
+	if _err != nil {
+		return _result, _err
+	}
+	_result = &QueryAntcloudMarketingagentCreativeMaterialResponse{}
+	_body, _err := client.DoRequest(tea.String("1.0"), tea.String("antcloud.marketingagent.creative.material.query"), tea.String("HTTPS"), tea.String("POST"), tea.String("/gateway.do"), tea.ToMap(request), headers, runtime)
+	if _err != nil {
+		return _result, _err
+	}
+	_err = tea.Convert(_body, &_result)
+	return _result, _err
+}
+
+// Description:
+//
+// Description: AI视频生成接口
+//
+// Summary: AI视频生成接口
+func (client *Client) ExecAntcloudMarketingagentCreativeVideo(request *ExecAntcloudMarketingagentCreativeVideoRequest) (_result *ExecAntcloudMarketingagentCreativeVideoResponse, _err error) {
+	runtime := &util.RuntimeOptions{}
+	headers := make(map[string]*string)
+	_result = &ExecAntcloudMarketingagentCreativeVideoResponse{}
+	_body, _err := client.ExecAntcloudMarketingagentCreativeVideoEx(request, headers, runtime)
+	if _err != nil {
+		return _result, _err
+	}
+	_result = _body
+	return _result, _err
+}
+
+// Description:
+//
+// Description: AI视频生成接口
+//
+// Summary: AI视频生成接口
+func (client *Client) ExecAntcloudMarketingagentCreativeVideoEx(request *ExecAntcloudMarketingagentCreativeVideoRequest, headers map[string]*string, runtime *util.RuntimeOptions) (_result *ExecAntcloudMarketingagentCreativeVideoResponse, _err error) {
+	_err = util.ValidateModel(request)
+	if _err != nil {
+		return _result, _err
+	}
+	_result = &ExecAntcloudMarketingagentCreativeVideoResponse{}
+	_body, _err := client.DoRequest(tea.String("1.0"), tea.String("antcloud.marketingagent.creative.video.exec"), tea.String("HTTPS"), tea.String("POST"), tea.String("/gateway.do"), tea.ToMap(request), headers, runtime)
+	if _err != nil {
+		return _result, _err
+	}
+	_err = tea.Convert(_body, &_result)
+	return _result, _err
+}
+
+// Description:
+//
+// Description: 视频任务查询接口
+//
+// Summary: 视频任务查询接口
+func (client *Client) QueryAntcloudMarketingagentCreativeVideo(request *QueryAntcloudMarketingagentCreativeVideoRequest) (_result *QueryAntcloudMarketingagentCreativeVideoResponse, _err error) {
+	runtime := &util.RuntimeOptions{}
+	headers := make(map[string]*string)
+	_result = &QueryAntcloudMarketingagentCreativeVideoResponse{}
+	_body, _err := client.QueryAntcloudMarketingagentCreativeVideoEx(request, headers, runtime)
+	if _err != nil {
+		return _result, _err
+	}
+	_result = _body
+	return _result, _err
+}
+
+// Description:
+//
+// Description: 视频任务查询接口
+//
+// Summary: 视频任务查询接口
+func (client *Client) QueryAntcloudMarketingagentCreativeVideoEx(request *QueryAntcloudMarketingagentCreativeVideoRequest, headers map[string]*string, runtime *util.RuntimeOptions) (_result *QueryAntcloudMarketingagentCreativeVideoResponse, _err error) {
+	_err = util.ValidateModel(request)
+	if _err != nil {
+		return _result, _err
+	}
+	_result = &QueryAntcloudMarketingagentCreativeVideoResponse{}
+	_body, _err := client.DoRequest(tea.String("1.0"), tea.String("antcloud.marketingagent.creative.video.query"), tea.String("HTTPS"), tea.String("POST"), tea.String("/gateway.do"), tea.ToMap(request), headers, runtime)
+	if _err != nil {
+		return _result, _err
+	}
+	_err = tea.Convert(_body, &_result)
+	return _result, _err
+}
+
+// Description:
+//
+// Description: 基于已有成功子图版本提交提示词编辑，异步生成修改后的图片。返回独立 messageId 和新 segmentVersionId，通过子图编辑查询接口获取任务进度及结果；成功版本可用于下一轮修改。
+//
+// Summary: 基于已有成功子图版本提交提示词编辑，异步生成修改后的图片。返回独立 messageId 和新 segmentVersionId，通过子图编辑查询接口获取任务进度及结果；成功版本可用于下一轮修改。
+func (client *Client) ExecAntcloudMarketingagentCreativeImageedit(request *ExecAntcloudMarketingagentCreativeImageeditRequest) (_result *ExecAntcloudMarketingagentCreativeImageeditResponse, _err error) {
+	runtime := &util.RuntimeOptions{}
+	headers := make(map[string]*string)
+	_result = &ExecAntcloudMarketingagentCreativeImageeditResponse{}
+	_body, _err := client.ExecAntcloudMarketingagentCreativeImageeditEx(request, headers, runtime)
+	if _err != nil {
+		return _result, _err
+	}
+	_result = _body
+	return _result, _err
+}
+
+// Description:
+//
+// Description: 基于已有成功子图版本提交提示词编辑，异步生成修改后的图片。返回独立 messageId 和新 segmentVersionId，通过子图编辑查询接口获取任务进度及结果；成功版本可用于下一轮修改。
+//
+// Summary: 基于已有成功子图版本提交提示词编辑，异步生成修改后的图片。返回独立 messageId 和新 segmentVersionId，通过子图编辑查询接口获取任务进度及结果；成功版本可用于下一轮修改。
+func (client *Client) ExecAntcloudMarketingagentCreativeImageeditEx(request *ExecAntcloudMarketingagentCreativeImageeditRequest, headers map[string]*string, runtime *util.RuntimeOptions) (_result *ExecAntcloudMarketingagentCreativeImageeditResponse, _err error) {
+	_err = util.ValidateModel(request)
+	if _err != nil {
+		return _result, _err
+	}
+	_result = &ExecAntcloudMarketingagentCreativeImageeditResponse{}
+	_body, _err := client.DoRequest(tea.String("1.0"), tea.String("antcloud.marketingagent.creative.imageedit.exec"), tea.String("HTTPS"), tea.String("POST"), tea.String("/gateway.do"), tea.ToMap(request), headers, runtime)
+	if _err != nil {
+		return _result, _err
+	}
+	_err = tea.Convert(_body, &_result)
+	return _result, _err
+}
+
+// Description:
+//
+// Description: 根据子图编辑接口返回的 message_id，查询当前调用用户及租户下的子图编辑任务进度和结果。返回新版本 ID、任务状态、成功图片地址或失败原因；查询成功不代表图片生成成功。
+//
+// Summary: 根据子图编辑接口返回的 message_id，查询当前调用用户及租户下的子图编辑任务进度和结果。返回新版本 ID、任务状态、成功图片地址或失败原因；查询成功不代表图片生成成功。
+func (client *Client) QueryAntcloudMarketingagentCreativeImageedit(request *QueryAntcloudMarketingagentCreativeImageeditRequest) (_result *QueryAntcloudMarketingagentCreativeImageeditResponse, _err error) {
+	runtime := &util.RuntimeOptions{}
+	headers := make(map[string]*string)
+	_result = &QueryAntcloudMarketingagentCreativeImageeditResponse{}
+	_body, _err := client.QueryAntcloudMarketingagentCreativeImageeditEx(request, headers, runtime)
+	if _err != nil {
+		return _result, _err
+	}
+	_result = _body
+	return _result, _err
+}
+
+// Description:
+//
+// Description: 根据子图编辑接口返回的 message_id，查询当前调用用户及租户下的子图编辑任务进度和结果。返回新版本 ID、任务状态、成功图片地址或失败原因；查询成功不代表图片生成成功。
+//
+// Summary: 根据子图编辑接口返回的 message_id，查询当前调用用户及租户下的子图编辑任务进度和结果。返回新版本 ID、任务状态、成功图片地址或失败原因；查询成功不代表图片生成成功。
+func (client *Client) QueryAntcloudMarketingagentCreativeImageeditEx(request *QueryAntcloudMarketingagentCreativeImageeditRequest, headers map[string]*string, runtime *util.RuntimeOptions) (_result *QueryAntcloudMarketingagentCreativeImageeditResponse, _err error) {
+	_err = util.ValidateModel(request)
+	if _err != nil {
+		return _result, _err
+	}
+	_result = &QueryAntcloudMarketingagentCreativeImageeditResponse{}
+	_body, _err := client.DoRequest(tea.String("1.0"), tea.String("antcloud.marketingagent.creative.imageedit.query"), tea.String("HTTPS"), tea.String("POST"), tea.String("/gateway.do"), tea.ToMap(request), headers, runtime)
+	if _err != nil {
+		return _result, _err
+	}
+	_err = tea.Convert(_body, &_result)
+	return _result, _err
+}
